@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://i470lvco3mlq"]
+[gd_scene load_steps=14 format=3 uid="uid://i470lvco3mlq"]
 
 [ext_resource type="PackedScene" uid="uid://dq6s00nowtq5i" path="res://scenes/player.tscn" id="1_qggpn"]
 [ext_resource type="Texture2D" uid="uid://cw0oy1e87ctbv" path="res://sprites/world_tileset.png" id="2_i47gf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bsy5fyskj4hkv" path="res://scenes/coin.tscn" id="4_a2lyc"]
 [ext_resource type="PackedScene" uid="uid://b51phbwjjdnys" path="res://scenes/killzone.tscn" id="5_omhs3"]
 [ext_resource type="PackedScene" uid="uid://4ljk6prnco1h" path="res://scenes/slime.tscn" id="6_1yyco"]
+[ext_resource type="FontFile" uid="uid://c1tn5bxb850m3" path="res://fonts/PixelOperator8.ttf" id="7_2nyra"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ln66t"]
 texture = ExtResource("2_i47gf")
@@ -288,3 +289,36 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("6_1yyco")]
 position = Vector2(545, 80)
+
+[node name="Labes" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labes"]
+offset_left = -95.0
+offset_top = 84.0
+offset_right = -1.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_2nyra")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump."
+
+[node name="Label2" type="Label" parent="Labes"]
+offset_left = 390.0
+offset_top = 80.0
+offset_right = 486.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_2nyra")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts...
+"
+
+[node name="Label3" type="Label" parent="Labes"]
+offset_left = 716.0
+offset_top = -45.0
+offset_right = 814.0
+offset_bottom = -29.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_2nyra")
+theme_override_font_sizes/font_size = 8
+text = "Almost there ..."
